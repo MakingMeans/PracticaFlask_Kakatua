@@ -1,11 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-    <title>Inicio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
-    <h1>¡Bienvenido a nuestro software contable!</h1>
-    <p>Estamos desarrollando una solución completa para la gestión contable.</p>
-    <p>Si tienes alguna duda, no nos preguntes!!!</p>
+    <div class="container">
+        <h1>Calculadora</h1>
+        <form action="/calculate" method="post">
+            <input type="number" name="num1" placeholder="Número 1" required>
+            <select name="operation">
+                <option value="add">+</option>
+                <option value="subtract">-</option>
+                <option value="multiply">×</option>
+                <option value="divide">÷</option>
+            </select>
+            <input type="number" name="num2" placeholder="Número 2" required>
+            <button type="submit">Calcular</button>
+        </form>
+        {% if result is not none %}
+            <h2>Resultado: {{ result }}</h2>
+        {% endif %}
+        <a href="/about" class="btn">¿Cómo funciona?</a>
+    </div>
 </body>
 </html>
