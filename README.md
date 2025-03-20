@@ -9,16 +9,6 @@ Este es un mini proyecto web desarrollado con **Flask**, con el objetivo de apre
 - Uso de **HTML, CSS y Flask** para crear una interfaz sencilla pero funcional.
 - Diseño mejorado con **estilos personalizados**.
 
-PracticaFlask_Kakatua/
-│── static/             # Archivos CSS y otros estáticos
-│   ├── style.css       # Estilos de la calculadora y página "Acerca de"
-│── templates/          # Archivos HTML
-│   ├── index.html      # Página principal con la calculadora
-│   ├── about.html      # Página explicativa sobre Flask y la calculadora
-│── app.py              # Código principal de la aplicación Flask
-│── requirements.txt    # Dependencias del proyecto
-│── README.md           # Información del proyecto
-
 ## Tecnologías Usadas
 - Python con Flask
 - HTML y CSS para la interfaz
