@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Historial de Cálculos</title>
+  <link rel="stylesheet" href="/static/registers.css">
+</head>
+<body>
+  <h1>Historial de Cálculos</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Número 1</th>
+        <th>Número 2</th>
+        <th>Operación</th>
+        <th>Fecha y Hora</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for r in registros %}
+      <tr>
+        <td>{{ r.id }}</td>
+        <td>{{ r.num1 }}</td>
+        <td>{{ r.num2 }}</td>
+        <td>{{ r.operacion }}</td>
+        <td>{{ r.timestamp.strftime('%Y-%m-%d %H:%M:%S') }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  <a href="/" class="btn">Volver</a>
+</body>
+</html>

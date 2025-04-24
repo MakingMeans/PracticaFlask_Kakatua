@@ -9,7 +9,7 @@
 <body>
     <div class="container">
         <h1>Calculadora</h1>
-        <form action="/calculate" method="post">
+        <form action="/" method="post">
             <input type="number" name="num1" placeholder="Número 1" required>
             <select name="operation">
                 <option value="add">+</option>
@@ -24,6 +24,7 @@
             <h2>Resultado: {{ result }}</h2>
         {% endif %}
         <a href="/about" class="btn">¿Cómo funciona?</a>
+        <a href="/registers" class="btn">Ver Registros</a>
     </div>
 </body>
 </html>
