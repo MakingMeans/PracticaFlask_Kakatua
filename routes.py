@@ -22,11 +22,15 @@ def register_routes(app):
                 result = n1 / n2 if n2 != 0 else None
 
             # Guardar en tabla de auditoría
-            registro = Registro(num1=n1, num2=n2, operacion=op)
+            registro = Registro(num1=n1, num2=n2, result=result, operacion=op)
             db.session.add(registro)
             db.session.commit()
 
         return render_template('index.html', result=result)
+    
+    @app.route('/about')
+    def about():
+        return render_template('about.html')
 
     @app.route('/registers')
     def show_registers():

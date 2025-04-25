@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="/static/registers.css">
 </head>
 <body>
+  <div class="table-container">
   <h1>Historial de Cálculos</h1>
   <table>
     <thead>
@@ -13,6 +14,7 @@
         <th>ID</th>
         <th>Número 1</th>
         <th>Número 2</th>
+        <th>Resultado</th>
         <th>Operación</th>
         <th>Fecha y Hora</th>
       </tr>
@@ -23,12 +25,14 @@
         <td>{{ r.id }}</td>
         <td>{{ r.num1 }}</td>
         <td>{{ r.num2 }}</td>
+        <td>{{ r.result }}</td>
         <td>{{ r.operacion }}</td>
         <td>{{ r.timestamp.strftime('%Y-%m-%d %H:%M:%S') }}</td>
       </tr>
       {% endfor %}
     </tbody>
   </table>
+</div>
   <a href="/" class="btn">Volver</a>
 </body>
 </html>
